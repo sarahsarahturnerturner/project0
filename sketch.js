@@ -7,15 +7,15 @@ fill(252);
 beginShape();
 fill(219,150,235);
  vertex(0,height/2);
-    vertex(width*8/24,height/2);
-    vertex(width*9/24,height*11/32);//peak1
-    vertex(width*10/24,height*13/32);
-    vertex(width*11/24,height*3/32);//peak2
-    vertex(width*12/24,height*8/32);
-    vertex(width*13/24,height*0/32);//peak3
-    vertex(width*14/24,height*10/32);
-    vertex(width*15/24,height*8/32);//peak4
     vertex(width*16/24,height/2);
+    vertex(width*17/24,height*11/32);//peak1
+    vertex(width*18/24,height*13/32);
+    vertex(width*19/24,height*3/32);//peak2
+    vertex(width*20/24,height*8/32);
+    vertex(width*21/24,height*0/32);//peak3
+    vertex(width*22/24,height*10/32);
+    vertex(width*23/24,height*8/32);//peak4
+    vertex(width*24/24,height/2);
     vertex(width,height/2);
     vertex(width,height);
     vertex(0,height);
