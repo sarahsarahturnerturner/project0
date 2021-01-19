@@ -9,7 +9,7 @@ background(252, 83, 252);
 noStroke();
 fill(252);
 
-image(img, 100, 100, width/2, height/2);
+image(img, 100, 100, width/12, height/12);
 
  beginShape();
      fill(147,237,234);
