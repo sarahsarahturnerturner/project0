@@ -1,12 +1,19 @@
+let img;
+function preload(){
+	img = loadImage('pinksword.png');
+}
+
 function setup() {
 createCanvas(1920,1080);
 background(252, 83, 252);
 noStroke();
 fill(252);
 
+image(img, 100, 100, width/2, height/2);
+
  beginShape();
      fill(147,237,234);
-    ellipse(1800, 200, 200,200);
+    ellipse(1800, 175, 250,250);
     endShape();
 
 beginShape();
@@ -46,10 +53,4 @@ fill(219,150,235);
 
 }
 
-function draw() {
 
-
-
-
-
-}
