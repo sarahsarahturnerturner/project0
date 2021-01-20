@@ -3,13 +3,22 @@ function preload(){
 	img = loadImage('pinksword.png');
 }
 
+//var img = [];
+
 function setup() {
 createCanvas(1920,1080);
 background(252, 83, 252);
 noStroke();
 fill(252);
 
-image(img, 100, 100, width/12, height/12);
+push();
+angleMode(RADIANS);
+let a = atan2(-65, 75);
+rotate(a);
+translate(500, 100)
+image(img, 400, 500, 100, 300);
+pop();
+
 
  beginShape();
      fill(147,237,234);
@@ -20,12 +29,12 @@ beginShape();
 fill(219,150,235);
  vertex(0,height/2);
     vertex(width*16/24,height/2);
-    vertex(width*17/24,height*11/32);//peak1
-    vertex(width*18/24,height*13/32);
+    vertex(width*17/24,height*9/32);//peak1
+    vertex(width*18/24,height*17/32);
     vertex(width*19/24,height*3/32);//peak2
-    vertex(width*20/24,height*8/32);
+    vertex(width*20/24,height*14/32);
     vertex(width*21/24,height*0/32);//peak3
-    vertex(width*22/24,height*10/32);
+    vertex(width*22/24,height*12/32);
     vertex(width*23/24,height*8/32);//peak4
     vertex(width*24/24,height/2);
     vertex(width,height/2);
@@ -50,7 +59,11 @@ fill(219,150,235);
 
   noLoop();
 
-
 }
 
-
+ //move: function() {
+   // this.yPos += this.speed;
+//if (this.yPos - this.diameter/2 > height) {
+     // this.yPos = -this.diameter/2;
+   // } 
+  //}
