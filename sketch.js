@@ -1,3 +1,5 @@
+let swords = [];
+let numberofswords = 100;
 let img;
 function preload(){
 	img = loadImage('pinksword.png');
@@ -7,23 +9,34 @@ function preload(){
 
 function setup() {
 createCanvas(1920,1080);
-background(252, 83, 252);
+
 noStroke();
 fill(252);
+for (let i = 0; i < numberofswords; i++) {
+  swords.push(new Sword());
+}
+}
 
-push();
-angleMode(RADIANS);
-let a = atan2(-65, 75);
-rotate(a);
-translate(500, 100)
-image(img, 400, 500, 100, 300);
-pop();
+function draw (){
+  background(252, 83, 252);
+// push();
+// angleMode(RADIANS);
+// let a = atan2(-150, 100);
+// rotate(a);
+//image(img, 300, 200, 100, 300);
+// pop();
 
 
  beginShape();
      fill(147,237,234);
     ellipse(1800, 175, 250,250);
     endShape();
+
+for (var i = 0; i < swords.length; i++) {
+  swords[i].display();
+  swords[i].move();
+}
+
 
 beginShape();
 fill(219,150,235);
@@ -57,8 +70,38 @@ fill(219,150,235);
     vertex(width*8/24,height/2);
   endShape();
 
-  noLoop();
+}
 
+
+class Sword {
+  constructor() {
+    this.x = random(width)+5;
+    this.y = 0;
+    this.speed = (random(100)/100)+3;
+  }
+
+  move() {
+
+    this.y += this.speed;
+    // the circle is outside the canvas, retset its position at the top
+    if (this.y - this.speed/2 > height) {
+      this.y = -this.speed/2;
+//     this.y += this.speed;
+//     if (this.y == height) {}
+
+// if (this.yPos - this.diameter/2 > height) {
+//       this.yPos = -this.diameter/2;
+//      // y = 0;
+    }
+
+  }
+
+  display() {
+
+   // push();
+    image (img, this.x, this.y, width/20, height/30);
+   // pop();
+  }
 }
 
  //move: function() {
